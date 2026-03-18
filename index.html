@@ -3,50 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anosh Rameez | Shopify Expert</title>
+    <title>Anosh Rameez | Shopify Expert & Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/my-image.png">
     <style>
-        /* Unique Background Effect */
-        body {
-            background: radial-gradient(circle at top right, #1a1a2e, #0a0a0a);
-            color: white;
-            font-family: 'Inter', sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+        .glass:hover { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(59, 130, 246, 0.5); transform: translateY(-5px); }
+        .gradient-text { background: linear-gradient(to right, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .menu-open { transform: translateX(0) !important; }
     </style>
 </head>
-<body>
+<body class="selection:bg-blue-500/30">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter">ANOSH<span class="text-blue-500">.</span></div>
-        <ul class="flex gap-8 text-sm uppercase tracking-widest opacity-70">
-            <li><a href="#work" class="hover:opacity-100 transition">Work</a></li>
-            <li><a href="#services" class="hover:opacity-100 transition">Services</a></li>
-            <li><a href="mailto:hello@example.com" class="hover:opacity-100 transition">Contact</a></li>
-        </ul>
+    <nav class="fixed top-0 w-full z-[100] px-4 md:px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-full px-6 md:px-8 py-3 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tighter">ANOSH<span class="text-blue-500">.</span></div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium opacity-70">
+                <a href="#work" class="hover:opacity-100 transition">Work</a>
+                <a href="#about" class="hover:opacity-100 transition">About</a>
+                <a href="#contact" class="hover:opacity-100 transition">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 focus:outline-none">
+                <span class="w-6 h-0.5 bg-white"></span>
+                <span class="w-6 h-0.5 bg-white"></span>
+                <span class="w-6 h-0.5 bg-white"></span>
+            </button>
+        </div>
     </nav>
 
-    <section class="max-w-6xl mx-auto px-6 py-20 text-center md:text-left flex flex-col md:flex-row items-center">
-        <div class="flex-1">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Crafting High-End <br> <span class="text-blue-400">Shopify Experiences.</span>
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-[150] translate-x-full flex flex-col items-center justify-center space-y-8 text-2xl font-bold md:hidden">
+        <button id="close-btn" class="absolute top-8 right-8 text-4xl">&times;</button>
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <section class="pt-32 md:pt-48 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+            <h1 class="text-5xl md:text-8xl font-bold tracking-tight mb-6">
+                Shopify <br> <span class="gradient-text">Architect.</span>
             </h1>
-            <p class="text-xl opacity-60 mb-8 max-w-lg">
-                Developer of 100+ websites including Darimooch & Hive Living. Expert in Liquid, Shopify 2.0, and Custom Architectures.
+            <p class="text-lg text-gray-400 max-w-xl mb-10 mx-auto md:mx-0">
+                Expert in Custom Liquid, Shopify 2.0, and Scalable Architectures. 100+ stores delivered globally.
             </p>
-            <a href="#work" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition inline-block">View My Work</a>
+            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                <span class="glass px-4 py-2 rounded-full text-[10px] font-bold text-blue-400">LIQUID</span>
+                <span class="glass px-4 py-2 rounded-full text-[10px] font-bold text-blue-400">SHOPIFY 2.0</span>
+                <span class="glass px-4 py-2 rounded-full text-[10px] font-bold text-blue-400">UI/UX</span>
+            </div>
         </div>
-        <div class="flex-1 mt-12 md:mt-0">
-            <div class="glass-card w-full h-80 rounded-3xl flex items-center justify-center border-dashed border-2 border-white/20">
-                <span class="opacity-30 italic">[Your Store Mockup Here]</span>
+        <div class="flex-1 w-full max-w-sm md:max-w-none">
+            <div class="relative glass rounded-[3rem] overflow-hidden aspect-square border-2 border-white/10 shadow-2xl">
+                <img src="assets/my-image.png" alt="Anosh" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
 
+    <section id="work" class="px-6 max-w-6xl mx-auto py-20">
+        <h2 class="text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4 uppercase tracking-widest text-sm">Selected Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2 glass rounded-[2.5rem] p-8 min-h-[400px] flex flex-col justify-between overflow-hidden relative">
+                <div class="z-10">
+                    <h3 class="text-3xl font-bold">Darimooch</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Complete Re-architecture & Speed Optimization.</p>
+                </div>
+                <div class="mt-8 bg-blue-500/5 rounded-2xl h-48 border border-white/5 flex items-center justify-center italic text-white/20">Preview Image</div>
+            </div>
+            <div class="md:col-span-2 glass rounded-[2.5rem] p-8 min-h-[400px] flex flex-col justify-between">
+                <div>
+                    <h3 class="text-3xl font-bold">Hive Living</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Custom Shopify 2.0 Theme using Liquid & JSON.</p>
+                </div>
+                <div class="mt-8 bg-white/5 rounded-2xl h-48 border border-white/5 flex items-center justify-center italic text-white/20">Preview Image</div>
+            </div>
+            <div class="md:col-span-1 glass rounded-3xl p-6 text-center">
+                <h4 class="font-bold">Erum Khan</h4>
+                <p class="text-xs text-gray-500 mt-1 uppercase">Layout Optimization</p>
+            </div>
+            <div class="md:col-span-1 glass rounded-3xl p-6 text-center">
+                <h4 class="font-bold">The SGLondon</h4>
+                <p class="text-xs text-gray-500 mt-1 uppercase">Rapid Deployment</p>
+            </div>
+            <div class="md:col-span-2 glass rounded-3xl p-6 text-center">
+                <h4 class="font-bold">Shopatmanilyas</h4>
+                <p class="text-xs text-gray-500 mt-1 uppercase">Global Store Management</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="px-6 max-w-4xl mx-auto py-20 text-center">
+        <div class="glass rounded-[3rem] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 blur-[100px]"></div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">Let's build <br><span class="gradient-text">together.</span></h2>
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="mt-10 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Name" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition">
+                    <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition">
+                </div>
+                <textarea rows="4" placeholder="Your Message" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition"></textarea>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full transition-all w-full md:w-auto">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center opacity-40 text-sm">
+        <p>© 2026 Coderise Studio — Crafting Digital Excellence</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => mobileMenu.classList.add('menu-open'));
+        closeBtn.addEventListener('click', () => mobileMenu.classList.remove('menu-open'));
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('menu-open'));
+        });
+    </script>
 </body>
+<footer class="mt-24 py-10 border-t border-white/10 text-center text-gray-500 text-sm">
+  <p>© 2026 — Crafted by <span class="text-fuchsia-400">Anosh Rameez</span></p>
+  <div class="flex justify-center gap-6 mt-4 text-gray-400">
+    <a href="[github.com](https://github.com/anoshrameez)" class="hover:text-white"><i class="fa-brands fa-github"></i></a>
+    <a href="[linkedin.com](https://linkedin.com/in/anoshrameez)" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="mailto:hello@coderisestudio.com" class="hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</footer>
+
 </html>
