@@ -18,7 +18,7 @@ Hi! I'm Anosh, a specialized **CMS Developer** with a focus on high-performance 
 
 ## Tech Stack & Tools
 
-## 🛠️ Tech Stack & Tools
+## 🛠️ Tech Stack & Tools 
 
 - **CMS:** Shopify (Liquid), WordPress (Elementor, Breakdance, Divi), Webflow.
 - **Frontend:** HTML5, CSS3 (Sass), Tailwind CSS, JavaScript (ES6+).
