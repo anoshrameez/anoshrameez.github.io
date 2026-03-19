@@ -21,3 +21,15 @@ gsap.from(".social-icon-btn", {
     stagger: 0.1,
     ease: "back.out(1.7)"
 });
+
+gsap.from("#process .glass", {
+    scrollTrigger: {
+        trigger: "#process",
+        start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power4.out"
+});
